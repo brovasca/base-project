@@ -1,12 +1,4 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  Param,
-  Post,
-  Put,
-} from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { BenhnhanService } from './benhnhan.service.js';
 import { CreateBenhNhanDto } from './dto/create-benhnhan.dto.js';
 import { UpdateBenhNhanDto } from './dto/update-benhnhan.dto.js';

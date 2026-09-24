@@ -42,7 +42,7 @@ const DMLoaiMay: React.FC = () => {
   const columns: ColumnsType<LoaiMay> = [
       { title: 'ID', dataIndex: 'ID', key: 'ID', render: (value: number) => <strong>{value}</strong> },
       { title: 'TEN', dataIndex: 'TEN', key: 'TEN' },
-      { title: 'IMG', dataIndex: 'IMG', key: 'IMG' },
+      { title: 'URL', dataIndex: 'URL', key: 'URL' },
       { title: 'NGAYSD', dataIndex: 'NGAYSD', key: 'NGAYSD' }
     ];
 

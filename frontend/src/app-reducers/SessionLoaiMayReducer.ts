@@ -4,13 +4,13 @@ import Apis from '../utils/Apis';
 export interface LoaiMay {
   ID: number;
   TEN: string;
-  IMG: string;
+  URL: string;
   NGAYSD: string;
 }
 
 export type LoaiMayPayload = {
   TEN: string;
-  IMG: string;
+  URL: string;
 };
 
 export const getLoaiMay = async (): Promise<LoaiMay[]> => {

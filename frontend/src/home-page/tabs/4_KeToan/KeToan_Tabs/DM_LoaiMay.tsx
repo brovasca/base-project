@@ -7,7 +7,7 @@ import { LoaiMay, createLoaiMay, deleteLoaiMay, getLoaiMay, updateLoaiMay } from
 
 const emptyForm = {
   TEN: '',
-  IMG: '',
+  URL: '',
 };
 
 
@@ -66,7 +66,7 @@ const DMLoaiMay: React.FC = () => {
     }
     setUpdateForm({
       TEN: selected.TEN,
-      IMG: selected.IMG,
+      URL: selected.URL,
     });
     setVisibleUpdate(true);
   };
@@ -162,16 +162,16 @@ const DMLoaiMay: React.FC = () => {
       })}
     />
     <Modal title="Thêm" visible={visible} onCancel={() => setVisible(false)} onOk={handleSubmit} okText="Xác nhận thêm" cancelText="Hủy">
-      <Input placeholder="Họ tên" value={form.TEN} onChange={(e) => setForm({ ...form, TEN: e.target.value })} />
+      <Input placeholder="Tên loại máy" value={form.TEN} onChange={(e) => setForm({ ...form, TEN: e.target.value })} />
       <br /><br />
-      <Input placeholder='URL hình' value={form.IMG} onChange={(e) => setForm({ ...form, IMG: e.target.value })} />
+      <Input placeholder='URL hình' value={form.URL} onChange={(e) => setForm({ ...form, URL: e.target.value })} />
       <br /><br />
     </Modal>
     <Modal title="Sửa" visible={visibleUpdate} onCancel={() => setVisibleUpdate(false)} onOk={handleUpdateSubmit} okText="Xác nhận" cancelText="Hủy">
       <p>ID <strong>{selected?.ID}</strong></p>
       <Input placeholder="Tên" value={updateForm.TEN} onChange={(e) => setUpdateForm({ ...updateForm, TEN: e.target.value })} />
       <br /><br />
-      <Input placeholder='URL hình' value={updateForm.IMG} onChange={(e) => setUpdateForm({ ...updateForm, IMG: e.target.value })} />
+      <Input placeholder='URL hình' value={updateForm.URL} onChange={(e) => setUpdateForm({ ...updateForm, URL: e.target.value })} />
       <br /><br />
     </Modal>
     <Modal
@@ -183,7 +183,7 @@ const DMLoaiMay: React.FC = () => {
       cancelText="Hủy"
       okButtonProps={{ danger: true }}
     >
-      <p>Xóa bệnh nhân <strong>{selected?.ID}</strong> — {selected?.TEN}?</p>
+      <p>Xóa máy <strong>{selected?.ID}</strong> — {selected?.TEN}?</p>
     </Modal>
   </>
   );

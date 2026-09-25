@@ -51,6 +51,7 @@ export class DMLoaiMayRepository {
         where ID = :ID
         `;
     const result = await this.databaseService.execute(resultUpdate, {
+      ID,
       TEN: data.TEN,
       URL: data.URL,
     });

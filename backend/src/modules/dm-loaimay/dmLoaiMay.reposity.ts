@@ -71,7 +71,7 @@ export class DMLoaiMayRepository {
   assertAffected(rowsAffected: number, ID?: number) {
     if (rowsAffected < 1) {
       throw new NotFoundException(
-        ID != null ? `Không tìm thấy bệnh nhân ${ID}` : 'Không ghi được dữ liệu',
+        ID != null ? `Không tìm thấy loại máy ${ID}` : 'Không ghi được dữ liệu',
       );
     }
   }

@@ -43,7 +43,7 @@ const DMLoaiMay: React.FC = () => {
       { title: 'ID', dataIndex: 'ID', key: 'ID', render: (value: number) => <strong>{value}</strong> },
       { title: 'TEN', dataIndex: 'TEN', key: 'TEN', render: (value: string) => <strong>{value}</strong> },
       { 
-        title: 'URL', dataIndex: 'URL', key: 'URL',
+        title: 'HINH', dataIndex: 'URL', key: 'URL',
         render: (url: any) => {
           return <Image width={50} src={`/assets/images/${url}`}/>
         },

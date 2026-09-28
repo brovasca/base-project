@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { DeleteOutlined, EditOutlined, PlusOutlined } from '@ant-design/icons';
 import type { ColumnsType, TableProps } from 'antd/es/table';
-import { Button, DatePicker, Input, message, Modal, Space, Table } from 'antd';
+import { Button, DatePicker, Input, message, Modal, Space, Table, Image } from 'antd';
 import { LoaiMay, createLoaiMay, deleteLoaiMay, getLoaiMay, updateLoaiMay } from '../../../../app-reducers/SessionLoaiMayReducer';
 
 
@@ -41,8 +41,13 @@ const DMLoaiMay: React.FC = () => {
 
   const columns: ColumnsType<LoaiMay> = [
       { title: 'ID', dataIndex: 'ID', key: 'ID', render: (value: number) => <strong>{value}</strong> },
-      { title: 'TEN', dataIndex: 'TEN', key: 'TEN' },
-      { title: 'URL', dataIndex: 'URL', key: 'URL' },
+      { title: 'TEN', dataIndex: 'TEN', key: 'TEN', render: (value: string) => <strong>{value}</strong> },
+      { 
+        title: 'URL', dataIndex: 'URL', key: 'URL',
+        render: (url: any) => {
+          return <Image width={50} src={`/assets/images/${url}`}/>
+        },
+      },
       { title: 'NGAYSD', dataIndex: 'NGAYSD', key: 'NGAYSD' }
     ];
 

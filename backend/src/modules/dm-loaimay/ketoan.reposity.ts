@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { DatabaseService } from '../../database/database.service.js';
-import { CreateDMLoaiMayDto } from './dto/create-dmloaimay.dto.js';
-import { UpdateDMLoaiMayDto } from './dto/update-dmloaimay.dto.js';
+import { CreateDMLoaiMayDto } from './dto/createDmLoaiMay.dto.js';
+import { UpdateDMLoaiMayDto } from './dto/update-ketoan.dto.js';
 
 export type DMLoaiMayRecord = {
   ID: number;

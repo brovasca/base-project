@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-import { DMLoaiMayService } from './dmLoaiMay.service.js';
-import { CreateDMLoaiMayDto } from './dto/create-dmloaimay.dto.js';
-import { UpdateDMLoaiMayDto } from './dto/update-dmloaimay.dto.js';
+import { DMLoaiMayService } from './ketoan.service.js';
+import { CreateDMLoaiMayDto } from './dto/createDmLoaiMay.dto.js';
+import { UpdateDMLoaiMayDto } from './dto/update-ketoan.dto.js';
 
 @Controller('dmloaimay')
 export class DMLoaiMayController {

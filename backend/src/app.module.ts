@@ -5,7 +5,7 @@ import { AppService } from './app.service.js';
 import { DatabaseModule } from './database/database.module.js';
 import { BenhnhanModule } from './modules/benh-nhan/benhnhan.module.js';
 import { CampaignNonModule } from './modules/campaign-non/campaign-non.module.js';
-import { DMLoaiMayModule } from './modules/dm-loaimay/dmLoaiMay.module.js';
+import { DMLoaiMayModule } from './modules/dm-loaimay/ketoan.module.js';
 
 @Module({
   imports: [

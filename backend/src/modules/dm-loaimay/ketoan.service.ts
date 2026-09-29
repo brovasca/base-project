@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { DMLoaiMayRepository } from './dmLoaiMay.reposity.js';
-import { UpdateDMLoaiMayDto } from './dto/update-dmloaimay.dto.js';
-import { CreateDMLoaiMayDto } from './dto/create-dmloaimay.dto.js';
+import { DMLoaiMayRepository } from './ketoan.reposity.js';
+import { UpdateDMLoaiMayDto } from './dto/update-ketoan.dto.js';
+import { CreateDMLoaiMayDto } from './dto/createDmLoaiMay.dto.js';
 
 @Injectable()
 export class DMLoaiMayService {

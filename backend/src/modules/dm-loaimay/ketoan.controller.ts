@@ -34,4 +34,5 @@ export class DMLoaiMayController {
   delete(@Param('ID') ID: number) {
     return this.dmloaimayService.delete(ID);
   }
+
 }

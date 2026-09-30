@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { DeleteOutlined, EditOutlined, PlusOutlined } from '@ant-design/icons';
-import type { ColumnsType, TableProps } from 'antd/es/table';
-import { Button, DatePicker, Input, message, Modal, Space, Table, Image } from 'antd';
+import type { ColumnsType } from 'antd/es/table';
+import { Button, Input, message, Modal, Space, Table, Image } from 'antd';
 import { LoaiMay, createLoaiMay, deleteLoaiMay, getLoaiMay, updateLoaiMay } from '../../../../app-reducers/SessionLoaiMayReducer';
-
 
 const emptyForm = {
   TEN: '',

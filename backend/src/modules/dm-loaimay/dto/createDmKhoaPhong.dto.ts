@@ -7,5 +7,4 @@ export class CreateDMKhoaPhongDto{
 
     @IsString()
     GHI_CHU: string;
-    
 }

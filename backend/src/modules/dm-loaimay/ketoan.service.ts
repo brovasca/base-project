@@ -1,35 +1,35 @@
 import { Injectable } from '@nestjs/common';
-import { DMLoaiMayRepository } from './ketoan.reposity.js';
+import { KetoanRepository } from './ketoan.reposity.js';
 import { UpdateDMLoaiMayDto } from './dto/update-ketoan.dto.js';
 import { CreateDMLoaiMayDto } from './dto/createDmLoaiMay.dto.js';
 
 @Injectable()
-export class DMLoaiMayService {
-  constructor(private readonly dmloaimayRepository: DMLoaiMayRepository) {}
+export class KetoanService {
+  constructor(private readonly ketoanRepository: KetoanRepository) {}
 
   async findAll() {
-    return this.dmloaimayRepository.findAll();
+    return this.ketoanRepository.findAll();
   }
 
   async findOne(ID: number) {
-    return this.dmloaimayRepository.findOne(ID);
+    return this.ketoanRepository.findOne(ID);
   }
 
   async create(data: CreateDMLoaiMayDto) {
-    const rowsAffected = await this.dmloaimayRepository.create(data);
-    this.dmloaimayRepository.assertAffected(rowsAffected);
+    const rowsAffected = await this.ketoanRepository.create(data);
+    this.ketoanRepository.assertAffected(rowsAffected);
     return { message: 'Thành công' };
   }
 
   async update(ID: number, data: UpdateDMLoaiMayDto) {
-    const rowsAffected = await this.dmloaimayRepository.update(ID, data);
-    this.dmloaimayRepository.assertAffected(rowsAffected, ID);
+    const rowsAffected = await this.ketoanRepository.update(ID, data);
+    this.ketoanRepository.assertAffected(rowsAffected, ID);
     return { message: 'Thành công' };
   }
 
   async delete(ID: number) {
-    const rowsAffected = await this.dmloaimayRepository.resultDelete(ID);
-    this.dmloaimayRepository.assertAffected(rowsAffected, ID);
+    const rowsAffected = await this.ketoanRepository.resultDelete(ID);
+    this.ketoanRepository.assertAffected(rowsAffected, ID);
     return { message: 'Thành công' };
   }
 }

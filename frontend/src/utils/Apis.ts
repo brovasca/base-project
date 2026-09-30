@@ -4,7 +4,7 @@ const Apis = {
     BENH_NHAN: '/benhnhan',
     CAMPAIGN_NON: '/campaign-non',
     GET_POSTS: '/post/filter/v1',
-    DM_LOAI_MAY: '/dmloaimay'
+    DM_LOAI_MAY: '/ketoan'
   },
 };
 

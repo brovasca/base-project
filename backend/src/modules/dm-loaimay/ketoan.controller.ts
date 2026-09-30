@@ -1,25 +1,25 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-import { DMLoaiMayService } from './ketoan.service.js';
+import { KetoanService } from './ketoan.service.js';
 import { CreateDMLoaiMayDto } from './dto/createDmLoaiMay.dto.js';
 import { UpdateDMLoaiMayDto } from './dto/update-ketoan.dto.js';
 
-@Controller('dmloaimay')
-export class DMLoaiMayController {
-  constructor(private readonly dmloaimayService: DMLoaiMayService) {}
+@Controller('ketoan')
+export class KetoanController {
+  constructor(private readonly ketoanService: KetoanService) {}
 
   @Get()
   findAll() {
-    return this.dmloaimayService.findAll();
+    return this.ketoanService.findAll();
   }
 
   @Get(':ID')
   findOne(@Param('ID') ID: number) {
-    return this.dmloaimayService.findOne(ID);
+    return this.ketoanService.findOne(ID);
   }
 
   @Post()
   create(@Body() data: CreateDMLoaiMayDto) {
-    return this.dmloaimayService.create(data);
+    return this.ketoanService.create(data);
   }
 
   @Put(':ID')
@@ -27,12 +27,12 @@ export class DMLoaiMayController {
     @Param('ID') ID: number,
     @Body() data: UpdateDMLoaiMayDto,
   ) {
-    return this.dmloaimayService.update(ID, data);
+    return this.ketoanService.update(ID, data);
   }
 
   @Delete(':ID')
   delete(@Param('ID') ID: number) {
-    return this.dmloaimayService.delete(ID);
+    return this.ketoanService.delete(ID);
   }
 
 }

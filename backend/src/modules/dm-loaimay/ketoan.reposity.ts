@@ -11,7 +11,7 @@ export type DMLoaiMayRecord = {
 };
 
 @Injectable()
-export class DMLoaiMayRepository {
+export class KetoanRepository {
   constructor(private readonly databaseService: DatabaseService) {}
 
   async findAll() {
